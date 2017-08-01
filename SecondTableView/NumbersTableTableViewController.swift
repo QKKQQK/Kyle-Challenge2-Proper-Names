@@ -54,6 +54,7 @@ class NumbersTableTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         self.tableView.reloadData()
     }
 

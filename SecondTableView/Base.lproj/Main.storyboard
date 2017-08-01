@@ -75,7 +75,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lhE-yJ-SE5"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Row" id="mBw-ba-iXZ"/>
+                    <navigationItem key="navigationItem" title="Row" id="mBw-ba-iXZ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kDe-oV-hzr">
+                            <connections>
+                                <action selector="addTapped:" destination="ehr-dd-fxI" id="RCf-xI-ibJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="rowDisplay" destination="hC4-hK-gou" id="H8g-gc-ad6"/>
                     </connections>

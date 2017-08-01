@@ -25,6 +25,11 @@ class RowViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func addTapped(_ sender: Any) {
+        print("Tapped")
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 
     /*
     // MARK: - Navigation

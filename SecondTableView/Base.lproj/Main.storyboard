@@ -5,10 +5,12 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Numbers-->
         <scene sceneID="Hbk-YI-BoF">
             <objects>
                 <tableViewController id="nzM-j6-uUn" customClass="NumbersTableTableViewController" customModule="SecondTableView" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,6 +35,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ehr-dd-fxI" kind="show" identifier="showRow" id="AZK-Hk-BeN"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -40,11 +45,44 @@
                             <outlet property="delegate" destination="nzM-j6-uUn" id="2Yq-XZ-Ouq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="oGN-Qq-0iD"/>
+                    <navigationItem key="navigationItem" title="Numbers" id="oGN-Qq-0iD"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fte-zG-IzS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-80" y="142"/>
+        </scene>
+        <!--Row-->
+        <scene sceneID="zAD-5B-CHt">
+            <objects>
+                <viewController id="ehr-dd-fxI" customClass="RowViewController" customModule="SecondTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="gTz-sn-aAb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hC4-hK-gou">
+                                <rect key="frame" x="16" y="295" width="343" height="77"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hC4-hK-gou" firstAttribute="trailing" secondItem="gTz-sn-aAb" secondAttribute="trailingMargin" id="Jqb-sB-ilo"/>
+                            <constraint firstItem="hC4-hK-gou" firstAttribute="centerY" secondItem="gTz-sn-aAb" secondAttribute="centerY" id="Zys-gb-RIE"/>
+                            <constraint firstItem="hC4-hK-gou" firstAttribute="leading" secondItem="gTz-sn-aAb" secondAttribute="leadingMargin" id="bVG-QR-FOI"/>
+                            <constraint firstItem="lhE-yJ-SE5" firstAttribute="bottom" secondItem="hC4-hK-gou" secondAttribute="bottom" constant="295" id="ziO-Cb-EKr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lhE-yJ-SE5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Row" id="mBw-ba-iXZ"/>
+                    <connections>
+                        <outlet property="rowDisplay" destination="hC4-hK-gou" id="H8g-gc-ad6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0pe-xx-cfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="741.60000000000002" y="141.67916041979012"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BDK-BZ-mQE">

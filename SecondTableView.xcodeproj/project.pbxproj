@@ -14,6 +14,8 @@
 		511AB9261F30D39C00A55C00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511AB9241F30D39C00A55C00 /* LaunchScreen.storyboard */; };
 		511AB92E1F30D58300A55C00 /* NumbersTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511AB92D1F30D58300A55C00 /* NumbersTableTableViewController.swift */; };
 		511AB9301F30DB9200A55C00 /* RowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511AB92F1F30DB9100A55C00 /* RowViewController.swift */; };
+		511EE4581F30F0A7001005EE /* SetRowNumberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EE4571F30F0A7001005EE /* SetRowNumberTableViewController.swift */; };
+		511EE45A1F30F3F2001005EE /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EE4591F30F3F2001005EE /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		511AB9271F30D39C00A55C00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		511AB92D1F30D58300A55C00 /* NumbersTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersTableTableViewController.swift; sourceTree = "<group>"; };
 		511AB92F1F30DB9100A55C00 /* RowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowViewController.swift; sourceTree = "<group>"; };
+		511EE4571F30F0A7001005EE /* SetRowNumberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRowNumberTableViewController.swift; sourceTree = "<group>"; };
+		511EE4591F30F3F2001005EE /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +65,9 @@
 				511AB91B1F30D39C00A55C00 /* AppDelegate.swift */,
 				511AB91D1F30D39C00A55C00 /* ViewController.swift */,
 				511AB91F1F30D39C00A55C00 /* Main.storyboard */,
+				511EE4571F30F0A7001005EE /* SetRowNumberTableViewController.swift */,
 				511AB92D1F30D58300A55C00 /* NumbersTableTableViewController.swift */,
+				511EE4591F30F3F2001005EE /* Settings.swift */,
 				511AB92F1F30DB9100A55C00 /* RowViewController.swift */,
 				511AB9221F30D39C00A55C00 /* Assets.xcassets */,
 				511AB9241F30D39C00A55C00 /* LaunchScreen.storyboard */,
@@ -141,7 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				511EE45A1F30F3F2001005EE /* Settings.swift in Sources */,
 				511AB91E1F30D39C00A55C00 /* ViewController.swift in Sources */,
+				511EE4581F30F0A7001005EE /* SetRowNumberTableViewController.swift in Sources */,
 				511AB9301F30DB9200A55C00 /* RowViewController.swift in Sources */,
 				511AB92E1F30D58300A55C00 /* NumbersTableTableViewController.swift in Sources */,
 				511AB91C1F30D39C00A55C00 /* AppDelegate.swift in Sources */,
@@ -324,6 +332,7 @@
 				511AB92C1F30D39C00A55C00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,7 +9,9 @@
 import UIKit
 
 class NumbersTableTableViewController: UITableViewController {
-
+    
+    var settings = Settings()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,7 +36,7 @@ class NumbersTableTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 100
+        return settings.rowCount
     }
 
     
@@ -51,6 +53,9 @@ class NumbersTableTableViewController: UITableViewController {
         return cell
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -96,6 +101,9 @@ class NumbersTableTableViewController: UITableViewController {
             let controller = segue.destination as! RowViewController
             let selectedCell = sender as! UITableViewCell
             controller.rowText = selectedCell.textLabel?.text
+        } else if segue.identifier == "showSetCount"{
+            let controller = segue.destination as! SetRowNumberTableViewController
+            controller.settings = settings
         }
     }
     

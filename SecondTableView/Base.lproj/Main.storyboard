@@ -45,7 +45,13 @@
                             <outlet property="delegate" destination="nzM-j6-uUn" id="2Yq-XZ-Ouq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Numbers" id="oGN-Qq-0iD"/>
+                    <navigationItem key="navigationItem" title="Numbers" id="oGN-Qq-0iD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="BAU-0l-H4f">
+                            <connections>
+                                <segue destination="k3v-Zr-4qA" kind="show" identifier="showSetCount" id="rPa-Fe-4ku"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fte-zG-IzS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,7 +82,7 @@
                         <viewLayoutGuide key="safeArea" id="lhE-yJ-SE5"/>
                     </view>
                     <navigationItem key="navigationItem" title="Row" id="mBw-ba-iXZ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kDe-oV-hzr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="kDe-oV-hzr">
                             <connections>
                                 <action selector="addTapped:" destination="ehr-dd-fxI" id="RCf-xI-ibJ"/>
                             </connections>
@@ -88,7 +94,58 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0pe-xx-cfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="741.60000000000002" y="141.67916041979012"/>
+            <point key="canvasLocation" x="754" y="631"/>
+        </scene>
+        <!--Row Count-->
+        <scene sceneID="7jA-TQ-HIF">
+            <objects>
+                <tableViewController id="k3v-Zr-4qA" customClass="SetRowNumberTableViewController" customModule="SecondTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="mia-9N-clB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Enter the number of rows" footerTitle="This is my footer" id="OPF-YG-ShL">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="CdH-OX-gja">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CdH-OX-gja" id="F7s-Pg-AuS">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Row Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8bf-DR-gs2">
+                                                    <rect key="frame" x="8" y="7" width="359" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="k3v-Zr-4qA" id="kaF-R7-rOI"/>
+                            <outlet property="delegate" destination="k3v-Zr-4qA" id="WKV-Oj-TGr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Row Count" id="VAE-Ct-sU3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="aIN-Cs-pE1">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="k3v-Zr-4qA" id="aKT-dc-dRl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="rowCount" destination="8bf-DR-gs2" id="xAe-G8-uq7"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wyi-Yx-e7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="753" y="-191"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BDK-BZ-mQE">

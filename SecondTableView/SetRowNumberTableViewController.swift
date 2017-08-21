@@ -12,7 +12,7 @@ class SetRowNumberTableViewController: UITableViewController {
     
     @IBOutlet weak var rowCount: UITextField!
     
-    var settings: Settings?
+    var names: Names?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +31,6 @@ class SetRowNumberTableViewController: UITableViewController {
 
     
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
-        let newCountText = rowCount.text!
-        let newCount = Int(newCountText)
-        settings?.rowCount = newCount ?? 100
         self.navigationController?.popViewController(animated: true)
     }
 

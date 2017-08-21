@@ -1,5 +1,5 @@
 //
-//  NumbersTableTableViewController.swift
+//  NamesTableTableViewController.swift
 //  SecondTableView
 //
 //  Created by Qiankang Zhou on 8/1/17.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class NumbersTableTableViewController: UITableViewController {
+class NamesTableViewController: UITableViewController {
     
-    var settings = Settings()
+    var names :Names?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,19 +36,13 @@ class NumbersTableTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return settings.rowCount
+        return names?.names.count ?? 0
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "numberCell", for: indexPath)
-
-        // Reasons: let is a constant, but swift constants are scoped
-        let cellText = "Row: \(indexPath.row + 1)"
-        cell.textLabel?.text = cellText
-        
-        // Print only 14 cells, only print what is needed on screen
-        print(cellText)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "nameCell", for: indexPath)
+        cell.textLabel?.text = names?.names[indexPath.row]
         
         return cell
     }
@@ -98,15 +92,5 @@ class NumbersTableTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showRow" {
-            let controller = segue.destination as! RowViewController
-            let selectedCell = sender as! UITableViewCell
-            controller.rowText = selectedCell.textLabel?.text
-        } else if segue.identifier == "showSetCount"{
-            let controller = segue.destination as! SetRowNumberTableViewController
-            controller.settings = settings
-        }
     }
-    
-
 }

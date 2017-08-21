@@ -10,16 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Numbers-->
+        <!--Names-->
         <scene sceneID="Hbk-YI-BoF">
             <objects>
-                <tableViewController id="nzM-j6-uUn" customClass="NumbersTableTableViewController" customModule="SecondTableView" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="nzM-j6-uUn" customClass="NamesTableViewController" customModule="SecondTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xnB-jo-iBd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="numberCell" textLabel="E15-q4-rBY" style="IBUITableViewCellStyleDefault" id="Vtg-cT-Mey">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="nameCell" textLabel="E15-q4-rBY" style="IBUITableViewCellStyleDefault" id="Vtg-cT-Mey">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vtg-cT-Mey" id="mmA-Jt-dE7">
@@ -45,7 +45,7 @@
                             <outlet property="delegate" destination="nzM-j6-uUn" id="2Yq-XZ-Ouq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Numbers" id="oGN-Qq-0iD">
+                    <navigationItem key="navigationItem" title="Names" id="oGN-Qq-0iD">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="BAU-0l-H4f">
                             <connections>
                                 <segue destination="k3v-Zr-4qA" kind="show" identifier="showSetCount" id="rPa-Fe-4ku"/>

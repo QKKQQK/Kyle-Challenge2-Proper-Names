@@ -8,9 +8,10 @@
 
 import UIKit
 
-class SetRowNumberTableViewController: UITableViewController {
+class AddNewNameTableViewController: UITableViewController {
     
-    @IBOutlet weak var rowCount: UITextField!
+    
+    @IBOutlet weak var textField: UITextField!
     
     var names: Names?
     
@@ -31,6 +32,10 @@ class SetRowNumberTableViewController: UITableViewController {
 
     
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
+        if let name = textField.text {
+            names?.names.append(name)
+            names?.names.sort()
+        }
         self.navigationController?.popViewController(animated: true)
     }
 

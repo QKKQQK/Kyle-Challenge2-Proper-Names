@@ -99,7 +99,7 @@
         <!--Row Count-->
         <scene sceneID="7jA-TQ-HIF">
             <objects>
-                <tableViewController id="k3v-Zr-4qA" customClass="SetRowNumberTableViewController" customModule="SecondTableView" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="k3v-Zr-4qA" customClass="AddNewNameTableViewController" customModule="SecondTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="mia-9N-clB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,7 +140,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="rowCount" destination="8bf-DR-gs2" id="xAe-G8-uq7"/>
+                        <outlet property="textField" destination="8bf-DR-gs2" id="MXP-cH-UwI"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wyi-Yx-e7i" userLabel="First Responder" sceneMemberID="firstResponder"/>

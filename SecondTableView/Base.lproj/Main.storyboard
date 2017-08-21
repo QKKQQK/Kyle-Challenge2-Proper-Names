@@ -48,7 +48,7 @@
                     <navigationItem key="navigationItem" title="Names" id="oGN-Qq-0iD">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="BAU-0l-H4f">
                             <connections>
-                                <segue destination="k3v-Zr-4qA" kind="show" identifier="showAddNam" id="rPa-Fe-4ku"/>
+                                <segue destination="k3v-Zr-4qA" kind="show" identifier="showAddName" id="rPa-Fe-4ku"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

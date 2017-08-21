@@ -99,7 +99,7 @@ class NamesTableViewController: UITableViewController {
             }
         } else if segue.identifier == "showAddName" {
             let controller = segue.destination as! AddNewNameTableViewController
-            controller.names = names
+            controller.names = self.names
         }
     }
 }

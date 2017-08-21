@@ -8,15 +8,15 @@
 
 import UIKit
 
-class RowViewController: UIViewController {
+class NameViewController: UIViewController {
 
     @IBOutlet weak var rowDisplay: UILabel!
     
-    var rowText: String?
+    var name: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        rowDisplay.text = rowText
+        rowDisplay.text = name
         // Do any additional setup after loading the view.
     }
 
@@ -25,10 +25,10 @@ class RowViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func addTapped(_ sender: Any) {
-        print("Tapped")
+    @IBAction func doneTapped(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
     
 
     /*

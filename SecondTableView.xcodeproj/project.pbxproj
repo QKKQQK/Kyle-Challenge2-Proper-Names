@@ -13,7 +13,7 @@
 		511AB9231F30D39C00A55C00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 511AB9221F30D39C00A55C00 /* Assets.xcassets */; };
 		511AB9261F30D39C00A55C00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511AB9241F30D39C00A55C00 /* LaunchScreen.storyboard */; };
 		511AB92E1F30D58300A55C00 /* NamesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511AB92D1F30D58300A55C00 /* NamesTableViewController.swift */; };
-		511AB9301F30DB9200A55C00 /* RowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511AB92F1F30DB9100A55C00 /* RowViewController.swift */; };
+		511AB9301F30DB9200A55C00 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511AB92F1F30DB9100A55C00 /* NameViewController.swift */; };
 		511EE4581F30F0A7001005EE /* SetRowNumberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EE4571F30F0A7001005EE /* SetRowNumberTableViewController.swift */; };
 		51FFEF851F4B64A100B101E4 /* Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FFEF841F4B64A100B101E4 /* Names.swift */; };
 		51FFEF881F4B69E400B101E4 /* propernames.txt in Resources */ = {isa = PBXBuildFile; fileRef = 51FFEF8A1F4B69E400B101E4 /* propernames.txt */; };
@@ -28,7 +28,7 @@
 		511AB9251F30D39C00A55C00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		511AB9271F30D39C00A55C00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		511AB92D1F30D58300A55C00 /* NamesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesTableViewController.swift; sourceTree = "<group>"; };
-		511AB92F1F30DB9100A55C00 /* RowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowViewController.swift; sourceTree = "<group>"; };
+		511AB92F1F30DB9100A55C00 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		511EE4571F30F0A7001005EE /* SetRowNumberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRowNumberTableViewController.swift; sourceTree = "<group>"; };
 		51FFEF841F4B64A100B101E4 /* Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Names.swift; sourceTree = "<group>"; };
 		51FFEF891F4B69E400B101E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/propernames.txt; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 				511AB92D1F30D58300A55C00 /* NamesTableViewController.swift */,
 				51FFEF841F4B64A100B101E4 /* Names.swift */,
 				51FFEF8A1F4B69E400B101E4 /* propernames.txt */,
-				511AB92F1F30DB9100A55C00 /* RowViewController.swift */,
+				511AB92F1F30DB9100A55C00 /* NameViewController.swift */,
 				511AB9221F30D39C00A55C00 /* Assets.xcassets */,
 				511AB9241F30D39C00A55C00 /* LaunchScreen.storyboard */,
 				511AB9271F30D39C00A55C00 /* Info.plist */,
@@ -154,7 +154,7 @@
 				51FFEF851F4B64A100B101E4 /* Names.swift in Sources */,
 				511AB91E1F30D39C00A55C00 /* ViewController.swift in Sources */,
 				511EE4581F30F0A7001005EE /* SetRowNumberTableViewController.swift in Sources */,
-				511AB9301F30DB9200A55C00 /* RowViewController.swift in Sources */,
+				511AB9301F30DB9200A55C00 /* NameViewController.swift in Sources */,
 				511AB92E1F30D58300A55C00 /* NamesTableViewController.swift in Sources */,
 				511AB91C1F30D39C00A55C00 /* AppDelegate.swift in Sources */,
 			);

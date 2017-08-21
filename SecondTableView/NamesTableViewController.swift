@@ -92,5 +92,12 @@ class NamesTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showName" {
+            let controller = segue.destination as!
+            NameViewController
+            if let indexPath = tableView.indexPathForSelectedRow {
+                controller.name = names?.names[indexPath.row]
+            }
+        }
     }
 }

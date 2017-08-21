@@ -36,7 +36,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ehr-dd-fxI" kind="show" identifier="showRow" id="AZK-Hk-BeN"/>
+                                    <segue destination="ehr-dd-fxI" kind="show" identifier="showName" id="AZK-Hk-BeN"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -48,7 +48,7 @@
                     <navigationItem key="navigationItem" title="Names" id="oGN-Qq-0iD">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="BAU-0l-H4f">
                             <connections>
-                                <segue destination="k3v-Zr-4qA" kind="show" identifier="showSetCount" id="rPa-Fe-4ku"/>
+                                <segue destination="k3v-Zr-4qA" kind="show" identifier="showAddNam" id="rPa-Fe-4ku"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -60,7 +60,7 @@
         <!--Row-->
         <scene sceneID="zAD-5B-CHt">
             <objects>
-                <viewController id="ehr-dd-fxI" customClass="RowViewController" customModule="SecondTableView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ehr-dd-fxI" customClass="NameViewController" customModule="SecondTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="gTz-sn-aAb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,7 +84,7 @@
                     <navigationItem key="navigationItem" title="Row" id="mBw-ba-iXZ">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="kDe-oV-hzr">
                             <connections>
-                                <action selector="addTapped:" destination="ehr-dd-fxI" id="RCf-xI-ibJ"/>
+                                <action selector="doneTapped:" destination="ehr-dd-fxI" id="Jsu-lz-cl8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

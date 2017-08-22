@@ -38,6 +38,8 @@ class AddNewNameTableViewController: UITableViewController {
                 names?.names.sort()
             }
             self.navigationController?.popViewController(animated: true)
+        } else {
+            textField.attributedPlaceholder = NSAttributedString(string: textField.placeholder!, attributes: [NSAttributedStringKey.foregroundColor: UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.5)])
         }
     }
 

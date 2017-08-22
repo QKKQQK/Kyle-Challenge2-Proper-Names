@@ -22,8 +22,7 @@ class Names {
             return nil
         }
         names = namestr.components(separatedBy: "\n")
+        //names.contains("\n")
         names.sort()
     }
-    
-    
 }

@@ -34,6 +34,7 @@ class NamesTableViewController: UITableViewController, UISearchBarDelegate {
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         updateResult()
+        self.tableView.reloadData()
     }
     
     func updateResult() {
@@ -41,7 +42,6 @@ class NamesTableViewController: UITableViewController, UISearchBarDelegate {
             searchResult = (names?.names.filter({
                 $0.range(of: search.text!, options: .caseInsensitive) != nil
             }))!
-            print(searchResult.description)
         }
     }
     
@@ -54,18 +54,27 @@ class NamesTableViewController: UITableViewController, UISearchBarDelegate {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        if search.text != "" {
+            return searchResult.count
+        }
         return names?.names.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "nameCell", for: indexPath)
-        cell.textLabel?.text = names?.names[indexPath.row]
+        
+        if search.text != "" {
+            cell.textLabel?.text = searchResult[indexPath.row]
+        } else {
+            cell.textLabel?.text = names?.names[indexPath.row]
+        }
         
         return cell
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        updateResult()
         self.tableView.reloadData()
     }
 

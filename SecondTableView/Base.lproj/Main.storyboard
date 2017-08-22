@@ -65,7 +65,7 @@
             </objects>
             <point key="canvasLocation" x="-80" y="142"/>
         </scene>
-        <!--Row-->
+        <!--Name-->
         <scene sceneID="zAD-5B-CHt">
             <objects>
                 <viewController id="ehr-dd-fxI" customClass="NameViewController" customModule="SecondTableView" customModuleProvider="target" sceneMemberID="viewController">
@@ -89,7 +89,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lhE-yJ-SE5"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Row" id="mBw-ba-iXZ">
+                    <navigationItem key="navigationItem" title="Name" id="mBw-ba-iXZ">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="kDe-oV-hzr">
                             <connections>
                                 <action selector="doneTapped:" destination="ehr-dd-fxI" id="Jsu-lz-cl8"/>
@@ -104,7 +104,7 @@
             </objects>
             <point key="canvasLocation" x="754" y="631"/>
         </scene>
-        <!--Row Count-->
+        <!--Add New Name-->
         <scene sceneID="7jA-TQ-HIF">
             <objects>
                 <tableViewController id="k3v-Zr-4qA" customClass="AddNewNameTableViewController" customModule="SecondTableView" customModuleProvider="target" sceneMemberID="viewController">
@@ -113,7 +113,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Enter the number of rows" footerTitle="This is my footer" id="OPF-YG-ShL">
+                            <tableViewSection headerTitle="Enter new name" id="OPF-YG-ShL">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="CdH-OX-gja">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
@@ -122,7 +122,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Row Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8bf-DR-gs2">
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8bf-DR-gs2">
                                                     <rect key="frame" x="8" y="7" width="359" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
@@ -140,7 +140,7 @@
                             <outlet property="delegate" destination="k3v-Zr-4qA" id="WKV-Oj-TGr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Row Count" id="VAE-Ct-sU3">
+                    <navigationItem key="navigationItem" title="Add New Name" id="VAE-Ct-sU3">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="aIN-Cs-pE1">
                             <connections>
                                 <action selector="saveButtonTapped:" destination="k3v-Zr-4qA" id="aKT-dc-dRl"/>

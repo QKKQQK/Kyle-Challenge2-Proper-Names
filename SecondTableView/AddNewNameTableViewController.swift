@@ -32,11 +32,13 @@ class AddNewNameTableViewController: UITableViewController {
 
     
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
-        if let name = textField.text {
-            names?.names.append(name)
-            names?.names.sort()
+        if textField.text != "" {
+            if let name = textField.text {
+                names?.names.append(name)
+                names?.names.sort()
+            }
+            self.navigationController?.popViewController(animated: true)
         }
-        self.navigationController?.popViewController(animated: true)
     }
 
 }

@@ -8,13 +8,18 @@
 
 import UIKit
 
-class NamesTableViewController: UITableViewController {
+class NamesTableViewController: UITableViewController, UISearchBarDelegate {
     
     var names :Names?
+    var searchResult : [String] = []
+    
+    @IBOutlet weak var search: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        search.placeholder = "Enter Name"
+        search.delegate = self
+        search.text = ""
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -27,6 +32,10 @@ class NamesTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("Text:\(search.text ?? "nil").")
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -39,7 +48,6 @@ class NamesTableViewController: UITableViewController {
         return names?.names.count ?? 0
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "nameCell", for: indexPath)
         cell.textLabel?.text = names?.names[indexPath.row]

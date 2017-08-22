@@ -33,7 +33,16 @@ class NamesTableViewController: UITableViewController, UISearchBarDelegate {
     }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("Text:\(search.text ?? "nil").")
+        updateResult()
+    }
+    
+    func updateResult() {
+        if search.text != "" {
+            searchResult = (names?.names.filter({
+                $0.range(of: search.text!, options: .caseInsensitive) != nil
+            }))!
+            print(searchResult.description)
+        }
     }
     
     // MARK: - Table view data source
